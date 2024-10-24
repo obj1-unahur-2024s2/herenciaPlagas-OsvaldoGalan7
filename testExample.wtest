@@ -1,9 +1,20 @@
-import example.pepita
+import elementos.*
+import plagas.*
 
-describe "group of tests for pepita" {
+describe "grupo de test del barrio" {
 
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+var casa = new Hogar(mugre=20,confort=5)
+var huertita = new Huerta(produccion=30)
+var saya = new Mascota(salud=300)
+var pulgar = new Pulga(poblacion=30)
+var putita = new Garrapata(poblacion=100)
+var cuca = new Cucaracha(poblacion=200,peso=10)
+var barrio = new Barrio()
+
+method initialize() {
+  barrio.elementos([casa,huertita,saya])
+}
+  test "No es cierto que la casa es un elemento bueno" {
+    assert.notThat(barrio.esElementoBueno(casa))
   }
-
 }
