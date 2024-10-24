@@ -17,4 +17,10 @@ method initialize() {
   test "No es cierto que la casa es un elemento bueno" {
     assert.notThat(barrio.esElementoBueno(casa))
   }
+
+  test "no es barrio copado"{
+    assert.notThat(barrio.esBarrioCopado())
+  }
+
+  
 }
