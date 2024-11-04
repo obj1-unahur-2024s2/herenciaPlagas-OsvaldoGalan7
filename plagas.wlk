@@ -8,14 +8,13 @@ class Plaga{
 }
 
 class Cucaracha inherits Plaga{
-  const peso
+  var pesoPromedio
 
-  method transmiteEnfermedades() = self.esPoblacionContagiosa() and self.promedioPeso() >= 10
-  method promedioPeso() = poblacion/peso
+  method transmiteEnfermedades() = self.esPoblacionContagiosa() and pesoPromedio >= 10
   override method danio() = poblacion/2
   override method efecto(){
     poblacion = poblacion + poblacion*0.1
-    self.promedioPeso() + 2
+    pesoPromedio = pesoPromedio + 2
   } 
   
 }
