@@ -10,14 +10,14 @@ class Hogar{
   }
 }
 
-class Huertas {
+object huertas {
   var property nivel = 100 
 }
 
-class Huerta inherits Huertas{
+class Huerta {
   var produccion
 
-  method esElementoBueno() = produccion > nivel 
+  method esElementoBueno() = produccion > huertas.nivel() 
   method ataqueDe(plaga){
     plaga.efecto()
     if(plaga.transmiteEnfermedades())
